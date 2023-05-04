@@ -8,7 +8,9 @@
   body{
     font-family: montserrat;
   }
-  nav{
+  nav {
+    position: fixed;
+    top: 0;
     background: peachpuff;
     height: 80px;
     width: 100%;
@@ -94,4 +96,76 @@
   section{
     background-size: cover;
     height: calc(100vh - 80px);
+  }
+
+  .search-bar {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 80px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: peachpuff;
+    border: none;
+    padding: 10px 20px;
+    width: 100%;
+  }
+  
+  form {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .search-bar input[type="text"] {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    padding-left: 40px;
+    background-color: peachpuff;
+    box-shadow: none;
+    margin-left: 30px;
+  }
+
+  .search-bar input[type="text"]:focus {
+    outline: none;
+  }
+  
+  .search-bar button {
+    padding: 8px 16px;
+    background-color: peachpuff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+    height: 40px;
+    font-size: 16px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+  }
+  .search-bar form {
+    position: relative;
+  }
+  
+  .search-bar form i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 15px;
+    margin-left: 20px;
+    color: #ffffff;
+  }
+  
+
+  
+  i:hover {
+    color: #f31d1d;
+  }
+  
+  button:hover {
+    background-color: #c07e7e;
   }
