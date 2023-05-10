@@ -1,0 +1,22 @@
+{
+  "name": "csc-642-bartenderapp",
+  "version": "1.0.0",
+  "description": "bartender app for school",
+  "main": "scripts.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pepalacios/csc642-BartenderApp.git"
+  },
+  "keywords": [
+    "csc642"
+  ],
+  "author": "The bartenders",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pepalacios/csc642-BartenderApp/issues"
+  },
+  "homepage": "https://github.com/Pepalacios/csc642-BartenderApp#readme"
+}
