@@ -11,7 +11,7 @@ body{
 nav {
   position: sticky;
   top: 0;
-  background: peachpuff;
+  background: salmon;
   height: 80px;
   width: 100%;
 }
@@ -50,6 +50,7 @@ a.active,a:hover{
   margin: 30px 0;
   border-radius: 30px;
 }
+
 .checkbtn{
   font-size: 30px;
   color: white;
@@ -92,6 +93,7 @@ a.active,a:hover{
   }
   nav ul li a{
     font-size: 20px;
+    
   }
   a:hover,a.active{
     background: none;
@@ -111,7 +113,7 @@ section{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: peachpuff;
+  background-color: salmon;
   height: 50px;
   width: 100%;
  
@@ -143,12 +145,12 @@ section{
 }
 .search-bar button {
   padding: 8px 16px;
-  background-color: peachpuff;
+  background-color: salmon;
   color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  margin-left: 10px;
+  margin-left: 11px;
   height: 40px;
   font-size: 16px;
 }
@@ -157,7 +159,6 @@ section{
 .search-bar form i {
   position: absolute;
   font-size: 17px;
-  margin-left: 10px;
   color: #ffffff;
   margin-left: 10px;
 }
