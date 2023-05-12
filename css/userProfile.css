@@ -121,11 +121,14 @@
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
   }
   .product button:hover {
-    background-color: #333;
-    color: #fff;
+    background-color: rgb(255, 158, 148);
+    color: white;
   }
   .button-color{
-    color: black;
+    color: salmon;
+  }
+  .button-color:hover{
+    color:white;
   }
   .window{
   width: 80px;
