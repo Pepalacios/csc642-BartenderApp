@@ -22,13 +22,13 @@
     background-color: rgb(255, 158, 148);
   }
 
-body{
+.formbody{
 	margin: 0;
 	padding: 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	min-height: 100vh;
+	min-height: 90vh;
 	font-family: 'Jost', sans-serif;
 	background: white;
 }
@@ -51,7 +51,7 @@ body{
 	height: 100%;
     background: salmon;
 }
-label{
+.formlabel{
 	color: #fff;
 	font-size: 2.3em;
 	justify-content: center;
@@ -61,7 +61,7 @@ label{
 	cursor: pointer;
 	transition: .5s ease-in-out;
 }
-input{
+.forminput{
 	width: 60%;
 	height: 20px;
 	background: #e0dede;
