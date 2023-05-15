@@ -1,0 +1,644 @@
+:root {
+	--u: 1.5vmin; /*1.5 爱心背景的方框大小*/
+	--clr: #777;
+	--bg: #d9def1;
+}
+body {
+	margin: 0;
+    width: 100vw;
+    height: 160vh;
+    overflow: hidden;
+    /* display: flex; */
+    display: grid;
+    align-items: center;
+    justify-content: center;
+	background-color: #ebeffb;
+	/* background-image: linear-gradient(315deg, #eaeefa 75%, #dbdef1 0%); */
+}
+
+/* Deal with the like button */
+
+.button {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    /* grid-row-start: 7;
+    grid-row-end: 8; */
+	position: relative;
+    width: calc(var(--u) * 3);
+    height: calc(var(--u) * 3);
+}
+
+input { display: none; }	
+
+label {
+    background: var(--bg); 
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: calc(var(--u) * 1.5);
+	cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+label:before {
+    content: "49";
+    position: absolute;
+    min-width: 50%;
+    left: 25%;
+    text-align: center;
+    top: 0;
+	bottom: 0;
+    background: var(--bg);
+    border-radius: calc(var(--u) * 2);
+    font-size: calc(var(--u) * 0.8);
+    font-family: Arial, Helvetica, serif;
+    padding: calc(var(--u) * 0.5);
+    box-sizing: border-box;
+    color: var(--clr);
+    line-height: calc(var(--u) * 2.25);
+    z-index: -1;
+	transition: all 0.5s ease 0s;
+	animation: counter-bot 1s ease 0s;
+}
+
+input:checked + label:before {
+    content: "50";
+    color: #fff;
+	background: #ff3c41; 
+	
+	bottom: inherit;
+	transition: all 0.5s ease 0s;
+	animation: counter-top 1s ease 0s;
+}
+/* 标签上下浮动的范围程度 */
+@keyframes counter-top {
+	70% { top: calc(var(--u) * -3.5); }
+}
+
+@keyframes counter-bot {
+	70% { 
+		top: inherit; 
+		bottom: calc(var(--u) * -3.5); 
+	}
+}
+
+
+label:after {	
+	content: "";
+    width: calc(var(--u) * 4);
+    height: calc(var(--u) * 4);
+    position: absolute;
+    border-radius: 100%;
+    box-sizing: border-box;
+    z-index: -2;
+    animation: disc-gray 1s ease 0s, spin-gray 0.65s ease-in-out 0.25s;
+    transform: rotate(0deg);
+	--pos: 95%;
+    background: 
+		radial-gradient(circle at 50% 50%, #fff0 0 62%, var(--bg) 63% 65%, #fff0 66% 100%), 
+		radial-gradient(circle at 50% var(--pos), var(--bg) 0 4%, #fff0 4.5% 100%);
+}
+
+@keyframes spin-gray {
+	100% {
+		transform: rotate(-360deg);
+	}
+}
+
+@keyframes spin-red {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes disc-gray {
+	70% {
+		width: calc(var(--u) * 8);
+		height: calc(var(--u) * 8);
+	}
+}
+
+@keyframes disc-red {
+	70% {
+		width: calc(var(--u) * 8);
+		height: calc(var(--u) * 8);
+	}
+}
+
+input:checked + label:after {
+	--bg: #ff3c41;
+	--pos: 5%;
+    animation: disc-red 1s ease 0s, spin-red 0.65s ease-in-out 0.25s;
+}
+
+
+label span {
+	position: absolute;
+  margin-right: 10px;
+	width: 60%;
+	height: 60%; 
+	animation: dislike 0.5s ease 0s;
+}
+
+label span:before {
+    content: "";
+    position: absolute;
+    border-radius: 0.05vmin;
+    border: 0.72vmin solid #fff0;
+    border-top: 0.8vmin solid var(--clr);
+    margin-top: 1.53vmin;
+    margin-left: 0.8vmin;
+    
+}
+label span:after {
+    content: "";
+    position: absolute;
+    background: var(--clr);
+    width: 1vmin;
+    height: 1vmin;
+    border-radius: 100%;
+    margin-left: 0.67vmin;
+    margin-top: 0.7vmin;
+    
+    box-shadow: 0.7vmin 0 0 0 var(--clr);
+}
+
+input:checked + label span {
+	--clr: #ff3c41; 
+	animation: like 0.5s ease 0s;
+}
+
+
+@keyframes like {
+	75% { transform: scale(1.25); }
+}
+@keyframes dislike {
+	75% { transform: scale(0.75); }
+}
+
+.button:hover label span:before, .button:hover label span:after {
+    --clr: #9d4958;
+}
+
+.button:hover input:checked + label span:before, .button:hover input:checked + label span:after {
+    --clr: #ff3c41; 
+}
+
+
+
+/* deal with the page format */
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+  }
+  body{
+    font-family: montserrat;
+    
+  }
+  nav {
+    position: sticky;
+    top: 0;
+    background: salmon;
+    height: 80px;
+    width: 100%;
+  }
+  label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+  }
+  nav ul{
+    float: right;
+    margin-right: 20px;
+  }
+  nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+  }
+  nav ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+  a.active,a:hover{
+    /* background: black; */
+    transition: .5s;
+  }
+
+
+  /* Deal with the button of Find Recipe and Cocktail */
+  :root{
+    /* color type A */
+    --line_color : #555555 ;
+    --back_color : #FFECF6  ;
+
+    /* color type B */
+    /* --line_color : #1b1919 ;
+    --back_color : #E9ECFF  ; */
+
+    /* color type C */
+    /* --line_color : #00135C ;
+    --back_color : #DEFFFA  ; */
+}
+
+.btn{
+    display: grid;
+   
+    position : relative ;
+    z-index : 0 ;
+    width : 240px ;
+    height : 56px ;
+    text-decoration : none ;
+    font-size : 14px ; 
+    font-weight : bold ;
+    color : var(--line_color) ;
+    letter-spacing : 2px ;
+    transition : all .3s ease ;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.btn__text{
+    display : flex ;
+    justify-content : center ;
+    align-items : center ;
+    width : 100% ;
+    height : 100% ;
+}
+.btn::before,
+.btn::after,
+.btn__text::before,
+.btn__text::after{
+    content : '' ;
+    position : absolute ;
+    height : 3px ;
+    border-radius : 2px ;
+    background : var(--line_color) ;
+    transition : all .5s ease ;
+}
+.btn::before{
+    top : 0 ;
+    left : 54px ;
+    width : calc( 100% - 56px * 2 - 16px ) ;
+}
+.btn::after{
+    top : 0 ;
+    right : 54px ;
+    width : 8px ;
+}
+.btn__text::before{
+    bottom : 0 ;
+    right : 54px ;
+    width : calc( 100% - 56px * 2 - 16px ) ;
+}
+.btn__text::after{
+    bottom : 0 ;
+    left : 54px ;
+    width : 8px ;
+}
+.btn__line{
+    position : absolute ;
+    top : 0 ;
+    width : 56px ;
+    height : 100% ;
+    overflow : hidden ;
+}
+.btn__line::before{
+    content : '' ;
+    position : absolute ;
+    top : 0 ;
+    width : 150% ;
+    height : 100% ;
+    box-sizing : border-box ;
+    border-radius : 300px ;
+    border : solid 3px var(--line_color) ;
+}
+.btn__line:nth-child(1),
+.btn__line:nth-child(1)::before{
+    left : 0 ;
+}
+.btn__line:nth-child(2),
+.btn__line:nth-child(2)::before{
+    right : 0 ;
+}
+.btn:hover{
+    letter-spacing : 6px ;
+}
+.btn:hover::before,
+.btn:hover .btn__text::before{
+    width : 8px ;
+}
+.btn:hover::after,
+.btn:hover .btn__text::after{
+    width : calc( 100% - 56px * 2 - 16px ) ;
+}
+.btn__drow1,
+.btn__drow2{
+    position : absolute ;
+    z-index : -1 ;
+    border-radius : 16px ;
+    transform-origin : 16px 16px ;
+}
+.btn__drow1{
+    top : -16px ;
+    left : 40px ;
+    width : 32px ;
+    height : 0;
+    transform : rotate( 30deg ) ;
+}
+.btn__drow2{
+    top : 44px ;
+    left : 77px ;
+    width : 32px ;
+    height : 0 ;
+    transform : rotate(-127deg ) ;
+}
+.btn__drow1::before,
+.btn__drow1::after,
+.btn__drow2::before,
+.btn__drow2::after{
+    content : '' ;
+    position : absolute ;
+}
+.btn__drow1::before{
+    bottom : 0 ;
+    left : 0 ;
+    width : 0 ;
+    height : 32px ;
+    border-radius : 16px ;
+    transform-origin : 16px 16px ;
+    transform : rotate( -60deg ) ;
+}
+.btn__drow1::after{
+    top : -10px ;
+    left : 45px ;
+    width : 0 ;
+    height : 32px ;
+    border-radius : 16px ;
+    transform-origin : 16px 16px ;
+    transform : rotate( 69deg ) ;
+}
+.btn__drow2::before{
+    bottom : 0 ;
+    left : 0 ;
+    width : 0 ;
+    height : 32px ;
+    border-radius : 16px ;
+    transform-origin : 16px 16px ;
+    transform : rotate( -146deg ) ;
+}
+.btn__drow2::after{
+    bottom : 26px ;
+    left : -40px ;
+    width : 0 ;
+    height : 32px ;
+    border-radius : 16px ;
+    transform-origin : 16px 16px ;
+    transform : rotate( -262deg ) ;
+}
+.btn__drow1,
+.btn__drow1::before,
+.btn__drow1::after,
+.btn__drow2,
+.btn__drow2::before,
+.btn__drow2::after{
+    background : var( --back_color ) ;
+}
+.btn:hover .btn__drow1{
+    animation : drow1 ease-in .06s ;
+    animation-fill-mode : forwards ;
+}
+.btn:hover .btn__drow1::before{
+    animation : drow2 linear .08s .06s ;
+    animation-fill-mode : forwards ;
+}
+.btn:hover .btn__drow1::after{
+    animation : drow3 linear .03s .14s ;
+    animation-fill-mode : forwards ;
+}
+.btn:hover .btn__drow2{
+    animation : drow4 linear .06s .2s ;
+    animation-fill-mode : forwards ;
+}
+.btn:hover .btn__drow2::before{
+    animation : drow3 linear .03s .26s ;
+    animation-fill-mode : forwards ;
+}
+.btn:hover .btn__drow2::after{
+    animation : drow5 linear .06s .32s ;
+    animation-fill-mode : forwards ;
+}
+@keyframes drow1{
+    0%   { height : 0 ; }
+    100% { height : 100px ; }
+}
+@keyframes drow2{
+    0%   { width : 0 ; opacity : 0 ;}
+    10%  { opacity : 0 ;}
+    11%  { opacity : 1 ;}
+    100% { width : 120px ; }
+}
+@keyframes drow3{
+    0%   { width : 0 ; }
+    100% { width : 80px ; }
+}
+@keyframes drow4{
+    0%   { height : 0 ; }
+    100% { height : 120px ; }
+}
+@keyframes drow5{
+    0%   { width : 0 ; }
+    100% { width : 124px ; }
+}
+
+
+/* Deal with the page format */
+.container{
+    width : 100% ;
+    /* 单个饮品的block的高度 */
+    height : 850px ; 
+    display : flex ;
+    flex-direction : column ;
+    justify-content : center ;
+    align-items : center ;
+}
+
+  section{
+    background-size: cover;
+    height: 100%;
+  }
+  
+  .search-bar {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: salmon;
+    height: 50px;
+    width: 100%;
+  }
+  
+  .search-bar input[type="text"] {
+    width: 100%;
+    height: 100%;
+    border: none;
+    font-size: 16px;
+    background-color: white;
+    box-shadow: none;
+    margin-left: 30px;
+  }
+  .search-bar input[type="text"]:focus {
+    outline: none;
+  }
+  .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+  }
+  .col-2{
+    flex-basis: 50%;
+    min-width: 300px;
+    
+  }
+  .search-bar button {
+    padding: 8px 16px;
+    background-color: salmon;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 11px;
+    height: 40px;
+    font-size: 16px;
+  }
+  
+  
+  .search-bar form i {
+    position: absolute;
+    font-size: 17px;
+    color: #ffffff;
+    margin-left: 10px;
+  }
+  .categories{
+    margin: 70px 0;
+    margin-right: 10px ;
+    margin-top: 20px;
+   
+  }
+  
+  .col-4 img{
+    
+   
+    margin-right: 100px;
+    margin-left: 2px;
+    height: 100%;
+    width: 70%;
+  }
+  
+  .small-container{
+    max-width: 1080px;
+   margin: 50px;
+    padding-left: 0px;
+    padding-right: 25px;
+  }
+
+  .col-4{
+     
+
+
+    display: grid;
+    border-radius: 4px;
+    box-shadow: 0 2px 2px rgba(238,110,110,0.1);
+    flex-basis: 25%;
+    padding: 10px;
+    min-width: 200px;
+    max-height: 800px; 
+    margin-top: 20px;
+    margin-bottom: 20px; 
+  transition:transform 0.3s ;
+  }
+  
+  
+  .title{
+    
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    line-height: 60px;
+  
+  }
+  .title::after{
+    content: '';
+    background: #ff523b;
+    width: 10900px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    right:2px;
+    transform: translateX();
+  }
+  h4{
+    grid-row-start: 3;
+    grid-row-end: 4;
+    color: #555;
+    font-weight: normal;
+  }
+  .col-4 p{
+    grid-row-start: 4;
+    grid-row-end: 5;
+    font-size: 18px;
+  }
+  .col-4:hover{
+    transform: translateY(-5px);
+  }
+
+  /* footer format */
+  .footer{
+    background: #000;
+    color: #8a8a8a;
+    font-size: 14px;
+    padding: 60px 0 20px;
+  }
+  .footer p{
+    color: #8a8a8a;
+  
+  }
+  .footer h3{
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  .footer-col-1,.footer-col-2,.footer-col-3,.footer-col-4{
+    min-width: 250px;
+    margin-bottom:20px;
+    
+  }
+  .footer-col-1{
+    flex-basis: 30%;
+  }
+  .footer-col-2{
+  flex: 1;
+  text-align: center;
+  }
+  .footer-col-2 img{
+    width: 180px;
+    margin-bottom: 20px;
+  }
+  
+  
+  
+  
+  
+  
+  
