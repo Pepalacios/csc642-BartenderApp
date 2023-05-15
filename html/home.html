@@ -1,75 +1,137 @@
-<html>
-<head>
-<title>W3.CSS Template</title>
-<meta charset="UTF-8">
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="../css/app.css">
+<link rel="stylesheet" href="../css/home.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@00;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="style.css">
 
-<style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
-.w3-bar-block .w3-bar-item {padding:20px}
-</style>
-</head>
-<body>
-  
-<!-- Top menu -->
-<div class="w3-top">
-  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
-    <div class="w3-center w3-padding-16">Home Page</div>
-  </div>
+
+  </head>
+  <body>
+
+  <div id="nav-container">
 </div>
-  
-<!-- !PAGE CONTENT! -->
-<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+<script src="../js/script.js"></script>
+<script>loadNavbar('nav-container');</script>
 
-  <!-- First Photo Grid-->
-  <div class="w3-row-padding w3-padding-16 w3-center" id="food">
-    <div class="w3-quarter">
-      <img src="images/tequilaSunrise_c.jpeg" alt="Tequila Sunrise" style="width:100%">
-      <h3>Tequila Sunrise</h3>
-      <button>Recipe</button>
+
+  <div class="categories">
+
     </div>
-    <div class="w3-quarter">
-      <img src="images/manhattan_c.jpg" alt="Manhattan" style="width:100%">
-      <h3>Manhattan</h3>
-      <button>Recipe</button>
-    </div>
-    <div class="w3-quarter">
-        <img src="images/moscowMule_c.jpeg" alt="Moscow Mule" style="width:100%">
-        <h3>Moscow Mule</h3>
-        <button>Recipe</button>
+    
+    <h1 class="title">Home</h2>
+      <div class="banner">
+        <div>
+          <h1 class="bannerlabel">Welcome to our Bartender App!</h1>
+          <h5 class="bannerlabel2">Discover an exquisite world of cocktails and mocktails, 
+            where creativity and flavor collide. Whether you're an aspiring mixologist or simply 
+            looking to enjoy a refreshing beverage, our app is your ultimate companion.</h5>
+          <a class="bannerbtn" href="../html/login.html">Get Started &#8594;</a>
+        </div>  
       </div>
-    <div class="w3-quarter">
-      <img src="images/dirtyShirley_c.jpeg" alt="Dirty Shirley" style="width:100%">
-      <h3>Dirty Shirley</h3>
-      <button>Recipe</button>
-    </div>
-  </div>
-  
-  <!-- Second Photo Grid-->
-  <div class="w3-row-padding w3-padding-16 w3-center">
-    <div class="w3-quarter">
-      <img src="images/sunrise_m.jpeg" alt="Sunrise" style="width:100%">
-      <h3>Sunrise</h3>
-      <button>Recipe</button>
-    </div>
-    <div class="w3-quarter">
-      <img src="images/manhattan_m.jpeg" alt="Virgin Manhattan" style="width:100%">
-      <h3>Virgin Manhattan</h3>
-      <button>Recipe</button>
-    </div>
-    <div class="w3-quarter">
-        <img src="images/cranberry_moscow_mule_mocktail-10.jpeg" alt="Virgin Moscow Mule" style="width:100%">
-        <h3>Virgin Moscow Mule</h3>
-        <button>Recipe</button>
-    <div class="w3-quarter">
-      <img src="images/shirleyTemple_m.webp" alt="Shirley Temple" style="width:100%">
-      <h3>Shirley Temple</h3>
-      <button>Recipe</button>
-    </div>
-    </div>
-  </div>
 
-<!-- End page content -->
-</div>
+            <!-- First Photo Grid-->
+            <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+              <div class="w3-quarter">
+                <img src="images/tequilaSunrise_c.jpg" alt="Tequila Sunrise" style="width:100%">
+                <h3>Tequila Sunrise</h3>
+                <button class="button button-like">
+                  <i class="fa fa-heart"></i>
+                </button>
+                <!-- <button onclick= "html/RecipePage.html">Recipe</button> -->
+              </div>
+              <div class="w3-quarter">
+                <img src="images/manhattan_c.jpg" alt="Manhattan" style="width:100%">
+                <h3>Manhattan</h3>
+                <button class="button button-like">
+                  <i class="fa fa-heart"></i>
+                </button>
+                <!-- <button>Recipe</button> -->
+              </div>
+              <div class="w3-quarter">
+                  <img src="images/moscowMule_c.jpeg" alt="Moscow Mule" style="width:100%">
+                  <h3>Moscow Mule</h3>
+                  <button class="button button-like">
+                    <i class="fa fa-heart"></i>
+                  </button>
+                  <!-- <button>Recipe</button> -->
+                </div>
+              <div class="w3-quarter">
+                <img src="images/dirtyShirley_c.jpeg" alt="Dirty Shirley" style="width:100%">
+                <h3>Dirty Shirley</h3>
+                <button class="button button-like">
+                  <i class="fa fa-heart"></i>
+                </button>
+                <!-- <button>Recipe</button> -->
+              </div>
+            </div>
+            
+            <!-- Second Photo Grid-->
+            <div class="w3-row-padding w3-padding-16 w3-center">
+              <div class="w3-quarter">
+                <img src="images/sunrise_m.jpg" alt="Sunrise" style="width:100%">
+                <h3>Sunrise</h3>
+                <button class="button button-like">
+                  <i class="fa fa-heart"></i>
+                </button>
+                <!-- <button>Recipe</button> -->
+              </div>
+              <div class="w3-quarter">
+                <img src="images/manhattan_m.jpg" alt="Virgin Manhattan" style="width:100%">
+                <h3>Virgin Manhattan</h3>
+                <button class="button button-like">
+                  <i class="fa fa-heart"></i>
+                </button>
+                <!-- <button>Recipe</button> -->
+              </div>
+              <div class="w3-quarter">
+                  <img src="images/cranberry_moscow_mule_mocktail-10.jpeg" alt="Virgin Moscow Mule" style="width:100%">
+                  <h3>Virgin Moscow Mule</h3>
+                  <button class="button button-like">
+                    <i class="fa fa-heart"></i>
+                  </button>
+                  <!-- <button>Recipe</button> -->
+              </div>
+              <div class="w3-quarter">
+                <img src="images/shirleyTemple_m.jpeg" alt="Shirley Temple" style="width:100%">
+                <h3>Shirley Temple</h3>
+                <button class="button button-like">
+                  <i class="fa fa-heart"></i>
+                </button>
+                <!-- <button>Recipe</button> -->
+              </div>
+              </div>
+              <div class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="footer-col-1">
+                            <h3>Download our App</h3>
+                            <p> Download the App for Apple and Android devices.</p>
+                        </div>
+                        <div class="footer-col-2">
+                            <img src="images/sunrise_m.jpg">
+                            <p> Helping you find the best recipes to create at home for any occasion.</p>
+                        </div>
+                        <div class="footer-col-3">
+                            <h3>Useful Links</h3>
+                            <ul>
+                                <li>Target</li>
+                                <li>Walmart</li>
+                                <li>Bevmo</li>
+            
+            
+            
+                            </ul>
+                        </div>
+            
+                    </div>
+                </div>
+            </div>
+</body>
+</html>
+

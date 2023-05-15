@@ -1,50 +1,80 @@
 <!DOCTYPE html>
 	<html>
 	  <head>
-		<title>Login1</title>
+		<title>Login</title>
 		<link rel="stylesheet" href="../css/app.css">
 		<link rel="stylesheet" href="../css/signup.css">
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 	  </head>
+	  
 	  <body>
 		<div id="nav-container">
 		</div>
+
+		<!-- <div class="home-button">
+			<a href="../html/home.html">
+			  <i class="fas fa-home"></i>
+			</a>
+		  </div> -->
+<br><br>
+<div class="formbody">
+				<div class="main">  	
+					<input type="checkbox" id="chk" aria-hidden="true">
+			
+						<div class="signup">
+							<form>
+								<label class="formlabel" for="chk" aria-hidden="true">Login</label>
+								<input class="forminput" type="email" name="email" placeholder="Email" required="">
+								<input class="forminput" type="password" name="pswd" placeholder="Password" required="">
+								<button class="loginbtn">Login</button>
+							</form>
+						</div>
+				  <div class="login">
+							<form>
+								<label class="formlabel" for="chk" aria-hidden="true">Sign up</label>
+							   <!-- <label class="authlabel">Username</label>-->
+								<input class="forminput" type="text" name="txt" placeholder="Username" required="">
+							   <!-- <label class="authlabel">Email</label>-->
+								<input class="forminput" type="email" name="email" placeholder="Email" required="">
+								<!--<label class="authlabel">Password</label>-->
+								<input class="forminput" type="password" name="pswd" placeholder="Password" required="">
+								<!--<label class="authlabel">Confirm Password</label>-->
+								<input class="forminput" type="password" name="pswd" placeholder="Confirm Password" required="">
+								<button>Sign up</button>
+							</form>
+						</div>
+				</div>
+				</div>
+				<div class="footer">
+					<div class="container">
+						<div class="row">
+							<div class="footer-col-1">
+								<h3>Download our App</h3>
+								<p> Download the App for Apple and Android devices.</p>
+							</div>
+							<div class="footer-col-2">
+								<img src="images/sunrise_m.jpg">
+								<p> Helping you find the best recipes to create at home for any occasion.</p>
+							</div>
+							<div class="footer-col-3">
+								<h3>Useful Links</h3>
+								<ul>
+									<li>Target</li>
+									<li>Walmart</li>
+									<li>Bevmo</li>
+				
+				
+				
+								</ul>
+							</div>
+				
+						</div>
+					</div>
+				</div>
 		<script src="../js/script.js"></script>
 		<script>loadNavbar('nav-container');</script>
-
-	<div class="categories">
-		<div class="container">
-			<div class="row">
-
-	<div class="main">  	
-		<input type="checkbox" id="chk" aria-hidden="true">
-
-			<div class="signup">
-				<form>
-					<label for="chk" aria-hidden="true">Login</label>
-					<input type="email" name="email" placeholder="Email" required="">
-					<input type="password" name="pswd" placeholder="Password" required="">
-					<button class="loginbtn">Login</button>
-				</form>
-			</div>
-      <div class="login">
-				<form>
-					<label for="chk" aria-hidden="true">Sign up</label>
-                   <!-- <label class="authlabel">Username</label>-->
-					<input type="text" name="txt" placeholder="Username" required="">
-                   <!-- <label class="authlabel">Email</label>-->
-					<input type="email" name="email" placeholder="Email" required="">
-                    <!--<label class="authlabel">Password</label>-->
-					<input type="password" name="pswd" placeholder="Password" required="">
-                    <!--<label class="authlabel">Confirm Password</label>-->
-					<input type="password" name="pswd" placeholder="Confirm Password" required="">
-					<button class="loginbtn">signup</button>
-				</form>
-				</div>
-			</div>
-		</div>
-	</div></div>
-</body>
+		
+			</body>
 </html>
