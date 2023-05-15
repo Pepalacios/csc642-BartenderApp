@@ -1,26 +1,4 @@
-.home-button {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    z-index: 999;
-  }
-  
-.home-button a {
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  text-align: center;
-  color: #fff;
-  background-color: salmon;
-  border-radius: 50%;
-  font-size: 20px;
-  text-decoration: none;
-}
-  
-  .home-button a:hover {
-    background-color: rgb(255, 158, 148);
-  }
+
 
 .formbody{
 	margin: 0;
@@ -51,6 +29,8 @@
 	height: 100%;
     background: salmon;
 }
+
+
 .formlabel{
 	color: #fff;
 	font-size: 2.3em;
